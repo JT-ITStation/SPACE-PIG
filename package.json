@@ -1,0 +1,18 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:ATestnet": "hardhat ignition deploy ./ignition/modules/Lock.ts --network artheraTestnet --show-stack-traces",
+    "verify:ATestnet": "hardhat verify --network artheraTestnet --contract contracts/Lock.sol:Lock --constructor-args arguments.js 0xc3C76d7Fe336664B8480a3Ef0Aa167A9F73033f8"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "erc721a": "^4.3.0",
+    "hardhat": "^2.22.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5"
+  }
+}
